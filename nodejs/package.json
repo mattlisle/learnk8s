@@ -1,0 +1,29 @@
+{
+  "name": "learnk8s",
+  "version": "1.0.0",
+  "description": "Intro course to k8s",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "marked": "^1.2.7",
+    "minio": "^7.0.18",
+    "mongodb": "^3.6.3",
+    "multer": "^1.4.2",
+    "path": "^0.12.7",
+    "pug": "^3.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattlisle/learnk8s.git"
+  },
+  "author": "Matt Lisle",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mattlisle/learnk8s/issues"
+  },
+  "homepage": "https://github.com/mattlisle/learnk8s#readme"
+}
