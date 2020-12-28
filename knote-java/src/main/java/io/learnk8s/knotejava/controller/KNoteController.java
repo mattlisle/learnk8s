@@ -2,11 +2,14 @@ package io.learnk8s.knotejava.controller;
 
 import io.learnk8s.knotejava.service.KNoteService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 @Controller
@@ -43,5 +46,11 @@ public class KNoteController {
     }
     // After save fetch all notes again
     return "index";
+  }
+
+  @GetMapping(value = "/img/{name}", produces = MediaType.IMAGE_PNG_VALUE)
+  public @ResponseBody byte[] getImageByName(@PathVariable String name) throws Exception {
+    System.out.println("> Getting image by name: " + name);
+    return kNoteService.getImageByName(name);
   }
 }
