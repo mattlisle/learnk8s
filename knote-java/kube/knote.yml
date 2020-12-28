@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
         - name: app
-          image: mattlisle/knote-java:1.0.0
+          image: mattlisle/knote-java:2.0.0
           ports:
             - containerPort: 8080
           env:
